@@ -6,7 +6,7 @@ from rich.prompt import Prompt
 from coordinator import ResearchCoordinator
 
 load_dotenv()
-
+ 
 console = Console()
 
 async def main() -> None:
