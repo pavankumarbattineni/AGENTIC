@@ -5,6 +5,8 @@ from coordinator import ResearchCoordinator
 from streamlit.runtime.scriptrunner import add_script_run_ctx
 import threading
 from streamlit.components.v1 import html
+from dotenv import load_dotenv
+load_dotenv()
 
 st.set_page_config(page_title="Deep Research", layout="wide")
 st.markdown("""
@@ -48,7 +50,7 @@ with st.sidebar:
     if st.button("➕ New Chat"):
         st.session_state.chat_id = str(uuid.uuid4())
         st.session_state.messages = []
-        st.experimental_rerun()
+        st.rerun()
 
 # --- Chat Display Area ---
 chat_container = st.container()
